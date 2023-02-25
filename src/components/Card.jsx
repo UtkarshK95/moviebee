@@ -16,6 +16,7 @@ export default function Card({ result }) {
           style={{
             maxWidth: "100%",
             height: "auto",
+            width: "auto",
           }}
           placeholder="blur"
           blurDataURL="/spinner.svg"

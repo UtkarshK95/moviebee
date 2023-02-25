@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-
 import { useSearchParams } from "next/navigation";
 
 export default function NavbarItem({ title, param }) {
