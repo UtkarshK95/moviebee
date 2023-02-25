@@ -6,6 +6,7 @@ NextJS - v13
 Tailwind CSS - v3
 NodeJS - v18.14.2
 npm - v9.5.0
+API - TMDB
 
 Notes - What you will learn
 
