@@ -15,7 +15,6 @@ export default function Header() {
           <span className="text-xl hidden sm:inline"> - An IMDb Clone</span>
         </h2>
       </Link>
-
       <div className="flex items-center space-x-5">
         <div className="flex">
           <MenuItem title="HOME" address="/" Icon={AiFillHome} />
