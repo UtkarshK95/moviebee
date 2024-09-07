@@ -18,10 +18,7 @@ moviebee/
 ├── public/                 # Static files like images and icons
 ├── src/                    # Source code for the application
 │   ├── components/         # Reusable React components
-│   ├── pages/              # Next.js pages for routing
-│   ├── styles/             # Global styles and Tailwind configurations
-│   ├── utils/              # Utility functions and helper methods
-│   └── index.js            # Main entry point for the Next.js app
+│   ├── app/                # Next.js pages for routing
 ├── .env                    # Environment variables
 ├── .gitignore              # Git ignore file
 ├── jsconfig.json           # JavaScript project configuration
