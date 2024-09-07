@@ -40,7 +40,7 @@ export default function DarkModeSwitch() {
             type="checkbox"
             value=""
             className="sr-only peer"
-            onClick={toggleTheme}
+            onChange={toggleTheme}
             checked={currentTheme === "dark"}
           />
         )}
