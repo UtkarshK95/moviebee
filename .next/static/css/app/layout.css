@@ -552,6 +552,12 @@ video {
 .mt-4 {
   margin-top: 1rem;
 }
+.mr-2 {
+  margin-right: 0.5rem;
+}
+.mr-8 {
+  margin-right: 2rem;
+}
 .line-clamp-2 {
   overflow: hidden;
   display: -webkit-box;
@@ -623,6 +629,15 @@ video {
 .justify-between {
   justify-content: space-between;
 }
+.gap-8 {
+  gap: 2rem;
+}
+.gap-4 {
+  gap: 1rem;
+}
+.gap-2 {
+  gap: 0.5rem;
+}
 .space-x-2 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
   margin-right: calc(0.5rem * var(--tw-space-x-reverse));
@@ -637,6 +652,16 @@ video {
   --tw-space-y-reverse: 0;
   margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(1rem * var(--tw-space-y-reverse));
+}
+.space-x-10 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(2.5rem * var(--tw-space-x-reverse));
+  margin-left: calc(2.5rem * calc(1 - var(--tw-space-x-reverse)));
+}
+.space-x-1 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(0.25rem * var(--tw-space-x-reverse));
+  margin-left: calc(0.25rem * calc(1 - var(--tw-space-x-reverse)));
 }
 .truncate {
   overflow: hidden;
@@ -676,6 +701,9 @@ video {
 .p-8 {
   padding: 2rem;
 }
+.p-6 {
+  padding: 1.5rem;
+}
 .px-2 {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
@@ -701,6 +729,9 @@ video {
 }
 .pt-6 {
   padding-top: 1.5rem;
+}
+.pe-8 {
+  padding-inline-end: 2rem;
 }
 .text-center {
   text-align: center;
@@ -1048,6 +1079,7 @@ html {
 
   .dark\:text-gray-100 {
     --tw-text-opacity: 1;
+    /* color: rgb(243 244 246 / var(--tw-text-opacity)); */
   }
 
   .peer:focus ~ .dark\:peer-focus\:ring-amber-800 {
