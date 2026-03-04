@@ -1,33 +1,24 @@
-// Fix the problem for "search params object is empty in production with next 13 app dir"
-
-// for more info "https://github.com/vercel/next.js/issues/43077"
-
-export const dynamic = "force-dynamic"; // this is the fix
-
-import Results from "@/components/Results";
-
-const API_KEY = process.env.API_KEY;
+import Results from "@/components/movie/Results";
+import { fetchTrending, fetchTopRated } from "@/lib/omdb";
 
 export default async function Home({ searchParams }) {
-  const genre = searchParams.genre || "fetchTrending";
+  const { genre = "fetchTrending" } = await searchParams;
+  const isTopRated = genre === "fetchTopRated";
 
-  const res = await fetch(
-    `https://api.themoviedb.org/3/${
-      genre === "fetchTopRated" ? "movie/top_rated" : "trending/all/week"
-    }?api_key=${API_KEY}&language=en-US&page=1`,
-    { next: { revalidate: 10000 } }
-  );
+  const results = isTopRated ? await fetchTopRated() : await fetchTrending();
 
-  if (!res.ok) {
-    throw new Error("Failed to fetch data"); // this will be caught by the error page and passed to the page as props
-  }
-
-  const data = await res.json();
-  const results = data.results;
+  const sectionTitle = isTopRated ? "Top Rated All Time" : "Trending This Week";
+  const sectionSubtitle = isTopRated
+    ? "The greatest films of all time, curated for you."
+    : "What everyone's watching right now.";
 
   return (
-    <div>
+    <main>
+      <div className="max-w-screen-2xl mx-auto px-4 pt-6 pb-2">
+        <h1 className="text-2xl font-bold text-slate-900 dark:text-white">{sectionTitle}</h1>
+        <p className="text-sm text-slate-500 dark:text-slate-400 mt-1">{sectionSubtitle}</p>
+      </div>
       <Results results={results} />
-    </div>
+    </main>
   );
 }

@@ -1,6 +1,11 @@
 {
-  "/page": "app/page.js",
+  "/_global-error/page": "app/_global-error/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/api/movie/[id]/route": "app/api/movie/[id]/route.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/genre/[slug]/page": "app/genre/[slug]/page.js",
   "/movie/[id]/page": "app/movie/[id]/page.js",
-  "/about/page": "app/about/page.js",
-  "/search/[searchTerm]/page": "app/search/[searchTerm]/page.js"
+  "/page": "app/page.js",
+  "/search/[searchTerm]/page": "app/search/[searchTerm]/page.js",
+  "/watchlist/page": "app/watchlist/page.js"
 }
