@@ -16,7 +16,8 @@ export default function GenreStrip() {
             <Link
               key={slug}
               href={`/genre/${slug}`}
-              className={`px-4 py-1.5 rounded-full text-sm font-medium whitespace-nowrap transition-colors duration-150 ${
+              aria-current={isActive ? "page" : undefined}
+            className={`px-4 py-1.5 rounded-full text-sm font-medium whitespace-nowrap transition-colors duration-150 ${
                 isActive
                   ? "bg-amber-500 text-white"
                   : "bg-slate-100 text-slate-600 hover:bg-amber-100 hover:text-amber-700 dark:bg-slate-800 dark:text-slate-300 dark:hover:bg-amber-900/40 dark:hover:text-amber-300"

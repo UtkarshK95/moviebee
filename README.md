@@ -1,92 +1,123 @@
-# MovieBee
+<div align="center">
 
-This repository contains the source code for the MovieBee web application, a platform for movie enthusiasts to discover, search, and manage a personalized watchlist. The project leverages modern web development technologies to deliver a responsive and engaging user experience.
+# 🎬 MovieBee
 
-## Technologies Used
+**A blazing-fast entertainment discovery platform.**
 
-- **Frontend Framework**: Next.js
-- **CSS Framework**: Tailwind CSS
-- **JavaScript Tools**: PostCSS, Axios
-- **API**: TMDb (The Movie Database) API
-- **Environment Management**: dotenv
-- **Linting**: ESLint
+Real-time ratings, curated collections, personalised watchlists, and a cinema-grade browsing experience — built for how people actually discover and watch content today.
 
-## Project Structure
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-moviebee--uk.vercel.app-blue?style=for-the-badge&logo=vercel)](https://moviebee-uk.vercel.app)
+[![Next.js](https://img.shields.io/badge/Next.js-16-black?style=for-the-badge&logo=next.js)](https://nextjs.org)
+[![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind-CSS-38BDF8?style=for-the-badge&logo=tailwindcss)](https://tailwindcss.com)
 
+</div>
+
+---
+
+## ✨ Features
+
+- **Movie Discovery** — Browse trending and top-rated movies with a cinema-grade UI
+- **Genre Browsing** — Explore movies filtered by genre
+- **Search** — Find any movie instantly by title
+- **Detailed Pages** — View cast, ratings, awards, and box office info
+- **Personalised Watchlist** — Save and manage movies across sessions
+- **Dark / Light Mode** — Theme toggle with system preference support
+- **Responsive Design** — Optimised for all screen sizes including mobile
+
+---
+
+## 🛠️ Tech Stack
+
+| Layer      | Technology              |
+| ---------- | ----------------------- |
+| Framework  | Next.js 16 (App Router) |
+| Language   | TypeScript              |
+| Styling    | Tailwind CSS            |
+| Data       | OMDb API                |
+| Linting    | ESLint 9                |
+| Deployment | Vercel                  |
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js v18+
+- A free [OMDb API key](https://www.omdbapi.com/apikey.aspx)
+
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/UtkarshK95/moviebee.git
+cd moviebee
+
+# Install dependencies
+npm install
 ```
-moviebee/
-├── public/                 # Static files like images and icons
-├── src/                    # Source code for the application
-│   ├── components/         # Reusable React components
-│   ├── app/                # Next.js pages for routing
-├── .env                    # Environment variables
-├── .gitignore              # Git ignore file
-├── jsconfig.json           # JavaScript project configuration
-├── next.config.js          # Next.js configuration file
-├── package.json            # Project dependencies and scripts
-├── postcss.config.js       # PostCSS configuration file
-├── tailwind.config.js      # Tailwind CSS configuration
-└── README.md               # Project documentation (this file)
+
+### Environment Setup
+
+```bash
+cp .env.example .env
 ```
 
-## Getting Started
+Open `.env` and add your API key:
 
-To run this project locally, follow these steps:
+```env
+OMDB_API_KEY=your_omdb_api_key_here
+```
 
-1. **Clone the repository**:
+### Run
 
-   ```bash
-   git clone https://github.com/your-username/moviebee.git
-   cd moviebee
-   ```
+```bash
+npm run dev
+```
 
-2. **Install dependencies**:
+App runs at `http://localhost:3000`.
 
-   ```bash
-   npm install
-   ```
-
-3. **Set up environment variables**:
-
-   Create a `.env` file in the root directory and add the necessary environment variables:
-
-   ```bash
-   TMDB_API_KEY=your_tmdb_api_key
-   ```
-
-4. **Run the development server**:
-
-   ```bash
-   npm run dev
-   ```
-
-   The app will be available at `http://localhost:3000`.
-
-## Building for Production
-
-To build the project for production, run:
+### Production Build
 
 ```bash
 npm run build
 ```
 
-The production-ready files will be located in the `.next` directory.
+---
 
-## Features
+## 📁 Project Structure
 
-- **Movie Discovery**: Browse and search for movies.
-- **Detailed Information**: View movie details, including cast, reviews, and ratings.
-- **Personalized Watchlist**: Add movies to a personal watchlist.
-- **Responsive Design**: Optimized for various screen sizes.
+```
+moviebee/
+├── public/               # Static assets (icons, images)
+├── src/
+│   ├── app/              # Next.js App Router pages and API routes
+│   ├── components/       # Reusable React components (ui, layout, movie)
+│   ├── context/          # React context (WatchlistContext)
+│   ├── lib/              # API logic, constants, storage utilities
+│   └── types/            # Shared TypeScript interfaces
+├── .env.example          # Environment variable template
+├── tailwind.config.js    # Tailwind CSS configuration
+├── next.config.mjs       # Next.js configuration
+└── package.json
+```
 
-## Contributing
+---
 
-Contributions are welcome! Please open an issue or create a pull request with your changes.
+## ☕ Support the Project
 
-## License
+- **GitHub:** [https://github.com/UtkarshK95/moviebee](https://github.com/UtkarshK95/moviebee)
+- **Buy Me a Coffee:** [https://buymeacoffee.com/utkarshk95](https://buymeacoffee.com/utkarshk95)
+
+---
+
+## 📄 License
 
 This project is licensed under the MIT License.
 
-## Contact
+---
 
-For any inquiries or feedback, please contact [utkarsh_katiyar@outlook.com](mailto:utkarsh_katiyar@outlook.com).
+<div align="center">
+  Made with ❤️ by <a href="https://github.com/UtkarshK95">Utkarsh Katiyar</a>
+</div>

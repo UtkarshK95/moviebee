@@ -101,6 +101,7 @@ function normalizeSearchResult(raw: OmdbSearchItem): Movie {
 
 async function fetchById(imdbId: string): Promise<Movie> {
   const apiKey = process.env.OMDB_API_KEY;
+  if (!apiKey) throw new Error("OMDB_API_KEY is not configured");
   const res = await fetch(
     `${OMDB_BASE_URL}/?i=${imdbId}&apikey=${apiKey}`,
     { next: { revalidate: 86400 } }
@@ -125,6 +126,7 @@ export async function fetchTopRated(): Promise<Movie[]> {
 
 export async function searchMovies(query: string): Promise<Movie[]> {
   const apiKey = process.env.OMDB_API_KEY;
+  if (!apiKey) throw new Error("OMDB_API_KEY is not configured");
   const res = await fetch(
     `${OMDB_BASE_URL}/?s=${encodeURIComponent(query)}&apikey=${apiKey}`,
     { cache: "no-store" }

@@ -8,6 +8,7 @@ export async function GET(_request: Request, { params }: { params: Promise<{ id:
     return NextResponse.json(movie);
   } catch (error) {
     const message = error instanceof Error ? error.message : "Unknown error";
-    return NextResponse.json({ error: message }, { status: 404 });
+    const isNotFound = message.toLowerCase().includes("not found");
+    return NextResponse.json({ error: message }, { status: isNotFound ? 404 : 500 });
   }
 }

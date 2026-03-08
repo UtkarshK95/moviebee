@@ -25,6 +25,8 @@ export default function WatchlistPage() {
     ).then((results: (Movie & { error?: string })[]) => {
       setMovies(results.filter((m) => !m.error));
       setLoading(false);
+    }).catch(() => {
+      setLoading(false);
     });
   }, [watchlist]);
 

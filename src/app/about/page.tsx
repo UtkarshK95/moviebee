@@ -1,7 +1,7 @@
 export const metadata = {
   title: "About",
   description:
-    "Learn about MovieBee — a modern movie & TV discovery app built with Next.js 14 and OMDb API — and meet the developer behind it.",
+    "Learn about MovieBee — a modern movie & TV discovery app built with Next.js 16 and OMDb API — and meet the developer behind it.",
 };
 
 export default function About() {
@@ -22,7 +22,7 @@ export default function About() {
           you need to satisfy your movie cravings in one place.
         </p>
         <p className="text-slate-600 dark:text-slate-300 leading-relaxed">
-          Built with cutting-edge technologies like Next.js 14 and Tailwind CSS 3, MovieBee ensures
+          Built with cutting-edge technologies like Next.js 16 and Tailwind CSS 3, MovieBee ensures
           a fast, responsive, and engaging user experience across all devices. Whether you&apos;re a
           casual moviegoer or a dedicated cinephile, MovieBee is designed to make your movie
           discovery journey seamless and enjoyable.
